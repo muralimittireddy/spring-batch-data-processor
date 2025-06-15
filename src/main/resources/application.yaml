@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: spring-batch-data-processor
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tripsdb
+    username: postgres
+    password: Vikram@mm971
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    hibernate:
+      ddl-auto: update     # dev?only; use 'validate' in prod
+    show-sql: true
+
+  batch:
+    jdbc:
+      initialize-schema: never  # <-- Batch tables are already present, so don't run again
+
+# Disable Spring?Boot's generic SQL?init to avoid duplicate execution
+spring.sql.init.mode: never
+
+logging:
+  level:
+    root: INFO
