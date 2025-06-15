@@ -78,6 +78,7 @@ This project demonstrates an ETL (Extract, Transform, Load) pipeline built with 
         java -jar target/spring-batch-data-processor-0.0.1-SNAPSHOT.jar
 
 📊 Output
+   
    Once the job completes, your PostgreSQL database (tripsdb) will have the entire 20M+ records from the CSV file loaded efficiently via Spring Batch.
 
 🧾 Notes
